@@ -4,8 +4,17 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({extended : true}))
 
+//routes
 app.get("/bmicalculator", function(req, res){
     res.sendFile(__dirname + "/bmiCalculator.html");
+})
+
+
+app.get("/", function(req, res){
+    res.json({
+        "id":"12hhje8773", 
+        "name":"ouhna elhassan",
+    })
 })
 
 app.post("/bmicalculator", function(req, res){
@@ -16,7 +25,6 @@ app.post("/bmicalculator", function(req, res){
     res.send("You bmi is " + BMI);
 })
 
-
-app.listen(3000, function(){
-    console.log("server is listening on port 3000...");
+app.listen(8080, function(){
+    console.log("server is listening on port 8080...");
 })
