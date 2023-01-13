@@ -9,7 +9,6 @@ app.get("/bmicalculator", function(req, res){
     res.sendFile(__dirname + "/bmiCalculator.html");
 })
 
-
 app.get("/", function(req, res){
     res.json({
         "id":"12hhje8773", 
